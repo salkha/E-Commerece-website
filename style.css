@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+section {
+    margin-bottom: 15px;
+}
+
+input {
+    padding: 3px;
+    margin-bottom: 5px;
+}
+
+
+/* Header
+---------------------------------------------------------*/
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px;
+    align-items: center;
+    background-color: whitesmoke;
+    
+
+}
+    header h1{
+        place-self: center;
+    }
+
+.login-section {
+    display: grid;
+    align-self: end;
+    place-self: end;
+    margin-right: 20px;
+}
+.login-section button {
+    padding: 3px;
+}
+
+.loggedIn{
+    color: green;
+    font-weight: bold;
+}
+
+.teaser {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: rgba(10, 10, 10, 0.3);
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+    nav li span  {
+        padding-left: 5px;
+    }
+
+    nav li a {
+        padding: 5px;
+        background-color: #fff;
+        text-decoration: none;
+    }
+
+.scrollIcon:hover{
+    zoom: 120%;
+    color: brown;
+}
+
+
+/* Product-Page
+---------------------------------------------------------*/
+.product-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 15px;
+    padding: 0 15px;
+}
+
+.product {
+    position: relative;
+    justify-items: stretch;
+    text-align: left;
+    box-shadow: 10px 10px 10px 0px #efefef;
+    border: 1px solid #eee;
+    padding: 10px;
+}
+
+.product img{
+    width: 100%;
+}
+
+.add-cart {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+    .product:hover .add-cart {
+        bottom: 60px;
+        opacity: 1;
+        padding: 5px;
+        text-decoration: none;
+    }
+
+.info-icon {
+    position: absolute;
+    top:20px;
+    right: 20px;
+}
+
+.product-information {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    padding: 10px;
+    width: 90%;
+    font-size: 15px;
+}
+
+    .info-icon:hover + .product-information {
+        display: block;
+    }
+
+
+/* Cart
+---------------------------------------------------------*/
+.cart ion-icon {
+    vertical-align: bottom;
+    font-size: 20px;
+    padding-right: 5px;
+
+}
+
+    .cart a {
+        background-color: brown;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+.your-cart{
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 20px;
+    color: brown;
+}
+
+.products {
+    margin-top: 20px;
+}
+
+.product-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    align-items: center;
+    justify-items: center;
+}
+
+    .products .product-wrapper {
+        border-bottom: 1px dotted #ccc;
+        padding: 10px 0;
+    }
+
+    .product-wrapper .product img {
+        height: 100px;
+        width: auto;
+    }
+
+.removeButton:hover{
+    color: red;
+}
+
+.basketTotalContainer {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    justify-items: center;
+}
+
+.basketTotalTitle {
+    justify-self: end;
+}
+
+.basketTotal {
+    text-align: center;
+}
+
+.buy-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+}
+
+    .buy-button:hover{
+        color:white;
+        background-color: green;
+    }
+
+
+/* Sign-Up / Impressum / About
+---------------------------------------------------------*/
+.wrapper-main {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 150px;
+}
+
+#Sign-up .wrapper-main {
+    background-image: url(images/signUp.jpg);
+}
+
+.sign-up {
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 20rem;
+}
+
+.about , 
+.impressum {
+    margin: 100px;
+    text-align: center;
+    min-height: 300px;
+    position: relative;
+    padding: 30px;   
+}
+
+.impressum{
+    margin: 200px;
+    color: brown;
+}
+
+.about::before {
+    background-image: url(images/background.jpg);
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+/* container-address
+---------------------------------------------------------*/
+
+.container-address{
+    padding: 100px;
+    text-align: center;
+}
+
+
+
+/* Footer
+---------------------------------------------------------*/
+.footer-element{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 30px;
+    margin-bottom: 30px;
+    border-top : black 2px solid;
+    padding: 5px;
+    text-align: center; 
+}
+
+/*----------confirmationpage-------------*/
+
+.confirmation{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.headingConfirmation{
+    font-weight: bold;
+    color: green;
+    font-size: 30px;
+}
+
+.thumbs-up{
+    color: green;
+}
+
+.billingTitle{
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid grey;
+}
+.billingBasketTotal{
+    border-top: 1px solid grey;
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    justify-items: end;
+    justify-self: start;
+    color: green;
+    font-size: 20px;
+}
+
+.recieptTitle{
+    text-align: center;
+    font-size: 20px;
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.printIcon{
+    color: green;
+    text-align: center;
+}
